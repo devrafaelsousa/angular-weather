@@ -8,7 +8,7 @@ import { WeatherService } from "src/app/shared/services/weather.service";
 import * as fromHomeActions from './home.actions';
 
 @Injectable() 
-export class MoreEffects {
+export class HoreEffects {
 
     query: string;
 

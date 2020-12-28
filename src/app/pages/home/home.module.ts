@@ -1,10 +1,10 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePage } from './containers/home/home.page';
 
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { MoreEffects } from './state/home.effects';
+import { HoreEffects } from './state/home.effects';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { homeReducer } from './state/home.reducer';
@@ -16,15 +16,12 @@ import { CurrentWeatherComponent } from './components/current-weather/current-we
     CommonModule,
     ReactiveFormsModule,
     StoreModule.forFeature('home', homeReducer),
-    EffectsModule.forFeature([MoreEffects]),
+    EffectsModule.forFeature([HoreEffects]),
     ComponentsModule,
   ],
   declarations: [
     HomePage,
     CurrentWeatherComponent,
-  ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
   ],
 })
 export class HomeModule { }

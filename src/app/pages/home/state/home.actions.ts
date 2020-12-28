@@ -1,14 +1,14 @@
-import { createAction, createReducer, props } from "@ngrx/store";
+import { createAction, props } from '@ngrx/store';
 
-import { Bookmark } from "src/app/shared/models/boolmark.model";
+import { Bookmark } from 'src/app/shared/models/boolmark.model';
 
 export const loadCurrentWeather = createAction(
     '[Home] Load Current Weather',
-    props<{ query: string}>(),
+    props<{ query: string }>(),
 );
 
 export const loadCurrentWeatherSuccess = createAction(
-    '[Weather API] Load Current Weather Success', 
+    '[Weather API] Load Current Weather Success',
     props<{ entity: any }>(),
 );
 
@@ -20,3 +20,5 @@ export const toggleBookmark = createAction(
     '[Home] Toggle Bookmark',
     props<{ entity: Bookmark }>(),
 );
+
+export const clearHomeState = createAction('[Home] Clear Home State');
