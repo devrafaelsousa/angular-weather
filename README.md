@@ -1,5 +1,11 @@
 # JvWeather
 
+## DESCRIÇÃO
+
+ - Neste Labs o objetivo é evoluir mais ainda seus conhecimentos em Angular e desenvolvimento Web. Aprenda uma forma avançada de gerenciamento de estado com NGRX, práticas e padrões de desenvolvimento, acompanhados de algumas APIs úteis que o Angular tem, mas que nem todo mundo conhece.
+
+  - Labs foi ministrado pelo Especialista João Victor Ghignatti - Lead Front end Developer, TownSq. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Development server
