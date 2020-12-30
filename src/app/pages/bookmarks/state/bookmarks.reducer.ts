@@ -1,26 +1,30 @@
 import { createReducer, Action, on } from '@ngrx/store';
+import { Bookmark } from 'src/app/shared/models/bookmark.model';
 
-import { Bookmark } from 'src/app/shared/models/boolmark.model';
 import * as fromHomeActions from '../../home/state/home.actions';
-import * as fromBookmarksAction from './bookmarks.actions';
+import * as fromBookmarksActions from './bookmarks.actions';
 
 export interface BookmarksState {
     list: Bookmark[];
-}
+    }
 
-export const bookmarkInitialState: BookmarksState = {
+    export const bookmarkInitialState: BookmarksState = {
     list: [],
-};
+    };
 
-const reducer = createReducer(
+    const reducer = createReducer(
     bookmarkInitialState,
     on(fromHomeActions.toggleBookmark, (state, { entity }) => ({
         ...state,
         list: toggleBookmark(state.list, entity),
     })),
-    on(fromBookmarksAction.removeBookmark, (state, { id }) => ({
+    on(fromBookmarksActions.removeBookmark, (state, { id }) => ({
         ...state,
         list: state.list.filter(b => b.id !== id),
+    })),
+    on(fromBookmarksActions.updateBookmarksList, (state, { list }) => ({
+        ...state,
+        list,
     })),
 );
 

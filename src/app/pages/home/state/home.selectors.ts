@@ -1,19 +1,19 @@
-import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { HomeState } from "./home.reducer";
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { HomeState } from './home.reducer';
 
-export const selectorHomeState = createFeatureSelector('home');
+export const selectHomeState = createFeatureSelector('home');
 
 export const selectCurrentWeather = createSelector(
-    selectorHomeState,
+    selectHomeState,
     (homeState: HomeState) => homeState.entity,
 );
 
 export const selectCurrentWeatherLoading = createSelector(
-    selectorHomeState,
+    selectHomeState,
     (homeState: HomeState) => homeState.loading,
 );
 
 export const selectCurrentWeatherError = createSelector(
-    selectorHomeState,
+    selectHomeState,
     (homeState: HomeState) => homeState.error,
 );
